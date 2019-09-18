@@ -1,1 +1,2 @@
-# Dits-du-Moyen-Age
+# Dits
+Website of ressources on medieval "dits". This website is created for the conference: "Le dit du berceau au tombeau (XIIIe-XVe siècles). Pour une réflexion collective et plurielle" (Université Laval, 22-23 Novembre 2019)
