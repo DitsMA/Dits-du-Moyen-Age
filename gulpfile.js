@@ -10,7 +10,7 @@ function cleandocs() {
       .pipe(clean());
 }
 
-function copyresources(done) {
+function copyresources() {
     return gulp.src(['./assets/**' ])
       .pipe(gulp.dest(targetStyle));
 }
@@ -27,4 +27,4 @@ function copy() {
 const build = gulp.series(cleandocs, copyresources, copy);
 
 exports.build = build;
-exports.default = build
+exports.default = build;
