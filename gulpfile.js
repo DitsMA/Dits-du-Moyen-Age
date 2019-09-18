@@ -15,10 +15,10 @@ function copyresources() {
       .pipe(gulp.dest(targetStyle));
 }
 
-gulp.task('images', function() {
-  return gulp.src('images/**')
-  .pipe(gulp.dest('docs/images'))
-})
+function copy() {
+  return gulp.src('./images/**')
+  .pipe(gulp.dest('./docs/images'))
+}
 
 function copy() {
    return gulp.src(['./images/**', './**/*.html', '!./fragments/**', '!./node_modules/**', '!templet-contenu.html' ])
