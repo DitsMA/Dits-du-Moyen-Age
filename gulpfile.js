@@ -16,8 +16,8 @@ function copyresources() {
 }
 
 function copy() {
-  return gulp.src('./images/**')
-  .pipe(gulp.dest('./docs/images'))
+  return gulp.src('images/**')
+  .pipe(gulp.dest(target))
 }
 
 function copy() {
