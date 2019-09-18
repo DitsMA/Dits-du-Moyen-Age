@@ -11,7 +11,7 @@ function cleandocs() {
 }
 
 function copyresources(done) {
-    return gulp.src(['./assets/css/**' ])
+    return gulp.src(['./assets/**' ])
       .pipe(gulp.dest(targetStyle));
 }
 
