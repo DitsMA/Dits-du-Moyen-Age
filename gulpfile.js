@@ -16,7 +16,7 @@ function copyresources(done) {
 }
 
 function copy() {
-   return gulp.src(['./images/**', './**/*.html', '!./fragments/**', '!./node_modules/**', '!templet-contenu.html' ])
+   return gulp.src(['!./images/**', './**/*.html', '!./fragments/**', '!./node_modules/**', '!templet-contenu.html' ])
       .pipe(fileinclude({
         prefix: '@@',
         basepath: '@file'
@@ -24,8 +24,7 @@ function copy() {
       .pipe(gulp.dest(target));
 }
 
-
 const build = gulp.series(cleandocs, copyresources, copy);
 
 exports.build = build;
-exports.default = build;
+exports.default = build
