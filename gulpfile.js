@@ -10,20 +10,19 @@ function cleandocs() {
       .pipe(clean());
 }
 
-function copyresources(done) {
+function copyresources() {
     return gulp.src(['./assets/**' ])
       .pipe(gulp.dest(targetStyle));
 }
 
 function copy() {
-   return gulp.src(['./**/*.html', '!./fragments/**', '!./node_modules/**', '!templet-contenu.html' ])
+   return gulp.src(['./images/**','./**/*.html', '!./fragments/**', '!./node_modules/**', '!templet-contenu.html' ])
       .pipe(fileinclude({
         prefix: '@@',
         basepath: '@file'
       }))
       .pipe(gulp.dest(target));
 }
-
 
 const build = gulp.series(cleandocs, copyresources, copy);
 
