@@ -19,7 +19,7 @@
   </teiHeader>
    <text>
       <body>
-         <pb n="1 recto" facs="../assets/images/Machaut.JPG" />
+         <pb n="1 recto" facs=".docs/assets/images/Machaut.JPG" />
          <head><hi rendition="#blue #fs24pt">L</hi><hi rendition="#small-caps #red">e</hi><hi rendition="#red"> remede de Fortune</hi></head>
 
          <lb/><l n="1">Cilz qui ueult
