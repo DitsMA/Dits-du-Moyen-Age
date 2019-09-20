@@ -4,7 +4,7 @@
   <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Le Dit du berceau au tombeau (XIIIe - XVe siècles)</title>
+            <title>Le Remède de Fortune</title>
          </titleStmt>
          <publicationStmt>
             <p></p>
@@ -13,27 +13,24 @@
             <p>This TEI/XML document is the original source</p>
          </sourceDesc>
       </fileDesc>
-     <encodingDesc>
-        
+     <encodingDesc xmlns="http://www.tei-c.org/ns/1.0">
+        <p></p>
      </encodingDesc>
   </teiHeader>
-  <text>
-     <body>
-        
-        <div type="presentation">
-    
-           <head rendition="#center #uppercase">Le Dit du berceau au tombeau (XIIIe - XVe siècles)</head>
-        
-         <p>Ce site est développé en lien avec la journée d'études "Le dit du berceau au tombeau (XIIIe - XVe siècles). Pour une réflexion collective et plurielle"
-         qui se déroulera les 22-23 septembre 2019 à l'Université Laval. Il contient du matériel textuel et visuel directement en lien avec les présentations 
-         qui seront données dans le cadre du colloque. Les participants pourront ainsi lire les textes étudiés et prendre connaissance de toute une série d'informations les concernant
-         avant l'événement, ou lire directement sur leurs ordinateurs ou téléphone les passages étudiés par les intervenants.</p>
-         
-         <p>Ultérieurement, ce site a pour objectif de se transformer en archive permettant l'accès à de nouvelles transcriptions des dits, chaque texte 
-         se présentant sous forme d'un dossier, entièrement en libre accès, qui pourrait être utilisé à des fins pédagogiques. La liste des texte sera également 
-         allongée pour devenir une ressource scientifique sur les dits médiévaux.</p>
-         
-        </div>
+   <text>
+      <body>
+         <pb n="1 recto" facs="../assets/images/Machaut.JPG" />
+         <head><hi rendition="#blue #fs24pt">L</hi><hi rendition="#small-caps #red">e</hi><hi rendition="#red"> remede de Fortune</hi></head>
+
+         <lb/><l n="1">Cilz qui ueult
+         <lb/>aucun art aprendre</l>
+         <lb/><l n="2">A .xii. choses 
+            <lb/>doit entendre.</l>
+         <lb/><l n="3">La premiere est
+            <lb/>quil soit eslire.</l>
+         <lb/><l n="4">Celui ou ses cuers miex le tire</l>
+         <lb/>
+          
       </body>
   </text>
 </TEI>
