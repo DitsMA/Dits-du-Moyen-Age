@@ -46,7 +46,7 @@
 	-->
 	<xsl:param name="filePrefix" select="'..'"/>
 	
-	<xsl:param name="teibpCSS" select="concat($filePrefix,'.docs/assets/css/teibp.css')"/>
+	<xsl:param name="mainCSS" select="concat($filePrefix,'.docs/assets/css/main.css')"/>
 	<xsl:param name="customCSS" select="concat($filePrefix,'.docs/assets/css/custom.css')"/>
 	<xsl:param name="teibpJS" select="concat($filePrefix,'.docs/assets/js/teibp.js')"/>
 	<xsl:param name="lessJS" select="concat($filePrefix,'.docs/assets/js/build-support/less.min.js')"/>
@@ -299,7 +299,7 @@
 			<meta charset="UTF-8"/>
 
 			<script src="{$lessJS}"></script>
-			<link id="maincss" rel="stylesheet" type="text/css" href="{$teibpCSS}"/>
+			<link id="maincss" rel="stylesheet" type="text/css" href="{$mainCSS}"/>
 			<link id="customcss" rel="stylesheet" type="text/css" href="{$customCSS}"/>
 
 			<xsl:call-template name="tagUsage2style"/>
