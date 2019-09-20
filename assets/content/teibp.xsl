@@ -46,13 +46,13 @@
 	-->
 	<xsl:param name="filePrefix" select="'..'"/>
 	
-	<xsl:param name="mainCSS" select="concat($filePrefix,'.docs/assets/css/main.css')"/>
-	<xsl:param name="customCSS" select="concat($filePrefix,'.docs/assets/css/custom.css')"/>
-	<xsl:param name="teibpJS" select="concat($filePrefix,'.docs/assets/js/teibp.js')"/>
-	<xsl:param name="lessJS" select="concat($filePrefix,'.docs/assets/js/build-support/less.min.js')"/>
-	<xsl:param name="theme.default" select="concat($filePrefix,'.docs/assets/css/teibp.css')"/>
-	<xsl:param name="theme.sleepytime" select="concat($filePrefix,'.docs/assets/css/sleepy.css')"/>
-	<xsl:param name="theme.terminal" select="concat($filePrefix,'.docs/assets/css/terminal.css')"/>
+	<xsl:param name="teibpCSS" select="concat($filePrefix,'/css/teibp.css')"/>
+	<xsl:param name="customCSS" select="concat($filePrefix,'./css/custom.css')"/>
+	<xsl:param name="teibpJS" select="concat($filePrefix,'./js/teibp.js')"/>
+	<xsl:param name="lessJS" select="concat($filePrefix,'./js/build-support/less.min.js')"/>
+	<xsl:param name="theme.default" select="concat($filePrefix,'./css/teibp.css')"/>
+	<xsl:param name="theme.sleepytime" select="concat($filePrefix,'./css/sleepy.css')"/>
+	<xsl:param name="theme.terminal" select="concat($filePrefix,'./css/terminal.css')"/>
 	
 	<xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
 		<xd:desc>
@@ -67,7 +67,9 @@
 		<html>
 			<xsl:call-template name="htmlHead"/>
 			<body>
-				
+				<xsl:if test="$includeToolbox = true()">
+					<xsl:call-template name="teibpToolbox"/>
+				</xsl:if>
 				<div id="tei_wrapper">
 					<xsl:apply-templates/>
 				</div>
@@ -299,7 +301,7 @@
 			<meta charset="UTF-8"/>
 
 			<script src="{$lessJS}"></script>
-			<link id="maincss" rel="stylesheet" type="text/css" href="{$mainCSS}"/>
+			<link id="maincss" rel="stylesheet" type="text/css" href="{$teibpCSS}"/>
 			<link id="customcss" rel="stylesheet" type="text/css" href="{$customCSS}"/>
 
 			<xsl:call-template name="tagUsage2style"/>
@@ -388,7 +390,21 @@
 		</footer>
 	</xsl:variable>
 
+	<xsl:template name="teibpToolbox">
+		<div id="teibpToolbox">
+			<h1>Toolbox</h1>
+			<label for="pbToggle">Hide page breaks</label>
+			<input type="checkbox" id="pbToggle" /> 
+			<div>
+				<h3>Themes:</h3>
 
+				<select id="themeBox" onchange="switchThemes(this);">
+					<option value="{$theme.default}" >Default</option>
+					<option value="{$theme.sleepytime}">Sleepy Time</option>
+					<option value="{$theme.terminal}">Terminal</option>
+				</select>			</div>
+		</div>
+	</xsl:template>
 	
 	<xsl:template name="analytics">
 		<script type="text/javascript">
