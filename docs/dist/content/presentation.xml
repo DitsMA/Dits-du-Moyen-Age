@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="teibp.xsl"?> 
+<?xml-stylesheet type="text/xsl" href="custom.xsl"?> 
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
@@ -19,7 +19,7 @@
   </teiHeader>
    <text>
       <body>
-         <pb n="1 recto" facs="../assets/images/Machaut.JPG" />
+         <pb n="1 recto" facs="assets/images/Machaut.JPG" />
          <head><hi rendition="#blue #fs24pt">L</hi><hi rendition="#small-caps #red">e</hi><hi rendition="#red"> remede de Fortune</hi></head>
 
          <lb/><l n="1">Cilz qui ueult

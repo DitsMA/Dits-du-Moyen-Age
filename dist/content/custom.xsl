@@ -17,8 +17,45 @@
          to be overridden here. -->
     <xsl:import href="teibp.xsl"/>
  
-
+    <xsl:template name="htmlHead">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="{$lessJS}"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link id="maincss" rel="stylesheet" type="text/css" href="{$teibpCSS}"/>
+		<link id="customcss" rel="stylesheet" type="text/css" href="{$customCSS}"/>
+		<xsl:call-template name="tagUsage2style"/>
+		<xsl:call-template name="rendition2style"/>
+	</head>
+    </xsl:template>
   
- 
+    <xsl:template match="/" name="htmlShell" priority="99">
+	<html>
+		<xsl:call-template name="htmlHead"/>
+		<body class="is-preload">
+			<div id="wrapper">
+				<div id="main">
+					<div class="inner">
+						@@include('../../fragments/header.html')
+						<xsl:if test="$includeToolbox = true()">
+							<xsl:call-template name="teibpToolbox"/>
+						</xsl:if>
+						<div id="tei_wrapper">
+							<xsl:apply-templates/>
+						</div>
+						<xsl:copy-of select="$htmlFooter"/>
+						<script type="text/javascript" src="{$teibpJS}"></script>
+						<script src="assets/js/jquery.min.js"></script>
+						<script src="assets/js/browser.min.js"></script>
+						<script src="assets/js/breakpoints.min.js"></script>
+						<script src="assets/js/util.js"></script>
+						<script src="assets/js/main.js"></script>
+					</div>
+				</div>
+				@@include('../../fragments/sidebar.html')
+			</div>
+		</body>
+	</html>
+    </xsl:template>
 
 </xsl:stylesheet>
