@@ -51,8 +51,7 @@
 	// Fixes.
 
 		// Object fit images.
-			if (!browser.canUse('object-fit')
-			||	browser.name == 'safari')
+			if (browser.name == 'safari')
 				$('.image.object').each(function() {
 
 					var $this = $(this),
