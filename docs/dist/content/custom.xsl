@@ -17,11 +17,12 @@
          to be overridden here. -->
     <xsl:import href="teibp.xsl"/>
  
+    <xsl:param name="filePrefix" select="'../../assets'"/>
+
     <xsl:template name="htmlHead">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<script src="{$lessJS}"></script>
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
 		<link id="maincss" rel="stylesheet" type="text/css" href="{$teibpCSS}"/>
 		<link id="customcss" rel="stylesheet" type="text/css" href="{$customCSS}"/>
 		<xsl:call-template name="tagUsage2style"/>
@@ -48,11 +49,11 @@
 						</div>
 						<xsl:copy-of select="$htmlFooter"/>
 						<script type="text/javascript" src="{$teibpJS}"></script>
-						<script src="assets/js/jquery.min.js"></script>
-						<script src="assets/js/browser.min.js"></script>
-						<script src="assets/js/breakpoints.min.js"></script>
-						<script src="assets/js/util.js"></script>
-						<script src="assets/js/main.js"></script>
+						<script src="../../assets/js/jquery.min.js"></script>
+						<script src="../../assets/js/browser.min.js"></script>
+						<script src="../../assets/js/breakpoints.min.js"></script>
+						<script src="../../assets/js/util.js"></script>
+						<script src="../../assets/js/main.js"></script>
 					</div>
 				</div>
 								<!-- Sidebar -->
