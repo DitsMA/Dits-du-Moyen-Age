@@ -18,6 +18,7 @@
     <xsl:import href="teibp.xsl"/>
  
     <xsl:param name="filePrefix" select="'../../assets'"/>
+    <xsl:param name="includeAnalytics" select="false()"/>
 
     <xsl:template name="htmlHead">
 	<head>
