@@ -1,13 +1,14 @@
 const fileinclude = require('gulp-file-include');
-const clean = require('gulp-clean');
+const del = require('del');
 const gulp = require('gulp');
 
 const target = './docs';
 const targetStyle = target + '/assets';
 
 function cleandocs() {
-    return gulp.src(target, {read: false})
-      .pipe(clean());
+    return del([
+        target
+    ]);
 }
 
 function copyresources() {
