@@ -15,14 +15,19 @@
       </fileDesc>
       <encodingDesc xmlns="http://www.tei-c.org/ns/1.0">
 		<tagsDecl>	
-			  <!-- Basic text formatting: bold, italic, underline, "normal," etc. -->
-			  <rendition xml:id="blue" scheme="css">
-			    color:blue;
-			  </rendition>
+				<!-- Basic text formatting: bold, italic, underline, "normal," etc. -->
+			    <rendition xml:id="blue" scheme="css">
+			    	    color:blue;
+			  	</rendition>
+				
+				<rendition xml:id="red" scheme="css">
+			    	    color:red;
+			  	</rendition>
+
 				<rendition xml:id="b" n="teibp:bold" scheme="css">
 					font-weight:bold;
 				</rendition> 
-				
+			
 				<rendition xml:id="i" n="teibp:italic" scheme="css">
 					font-style:italic;
 				</rendition> 
@@ -261,7 +266,6 @@
             <lb/>quil soit eslire.</l>
          <lb/><l n="4">Celui ou ses cuers miex le tire</l>
          <lb/>
-          
       </body>
   </text>
 </TEI>
