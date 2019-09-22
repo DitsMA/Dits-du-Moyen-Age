@@ -19,6 +19,7 @@
  
     <xsl:param name="filePrefix" select="'../../assets'"/>
     <xsl:param name="includeAnalytics" select="false()"/>
+    <xsl:param name="includeToolbox" select="false()"/>
 
     <xsl:template name="htmlHead">
 	<head>
@@ -61,9 +62,9 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">Accueil</a></li>
-										<li><a href="presentation.html">Presentation</a></li>
-										<li><a href="colloque.html">Colloque</a></li>
+										<li><a href="/Dits-du-Moyen-Age/index.html">Accueil</a></li>
+										<li><a href="/Dits-du-Moyen-Age/presentation.html">Presentation</a></li>
+										<li><a href="/Dits-du-Moyen-Age/colloque.html">Colloque</a></li>
 										<li>
                                             <span class="opener">Textes</span>
 											<ul>
@@ -89,6 +90,7 @@
 
 						</div>
 					</div>
+
 			</div>
 			<script src="{$teibpJS}"></script>
 			<script src="../../assets/js/jquery.min.js"></script>
