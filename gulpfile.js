@@ -1,13 +1,14 @@
 const fileinclude = require('gulp-file-include');
-const clean = require('gulp-clean');
+const del = require('del');
 const gulp = require('gulp');
 
 const target = './docs';
 const targetStyle = target + '/assets';
 
 function cleandocs() {
-    return gulp.src(target, {read: false})
-      .pipe(clean());
+    return del([
+        target
+    ]);
 }
 
 function copyresources() {
@@ -16,7 +17,7 @@ function copyresources() {
 }
 
 function copy() {
-   return gulp.src(['./images/**','./**/*.html', '!./fragments/**', '!./node_modules/**', '!templet-contenu.html' ])
+   return gulp.src(['./images/**','./**/*.html', './**/*.xsl', './**/*.xml', '!./fragments/**', '!./node_modules/**', '!templet-contenu.html' ])
       .pipe(fileinclude({
         prefix: '@@',
         basepath: '@file'

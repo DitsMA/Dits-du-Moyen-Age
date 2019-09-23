@@ -1,33 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="custom.xsl"?> 
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>Le Remède de Fortune</title>
-         </titleStmt>
-         <publicationStmt>
-            <p></p>
-         </publicationStmt>
-         <sourceDesc>
-            <p>This TEI/XML document is the original source</p>
-         </sourceDesc>
-      </fileDesc>
-      <encodingDesc xmlns="http://www.tei-c.org/ns/1.0">
-		<tagsDecl>	
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/xsl" href="teibp.xsl"?>
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:html="http://www.w3.org/1999/xhtml">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title type="main">TEI Boilerplate</title>
+				<title type="sub">A template for TEI P5</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Digital Culture Lab, School of Library &amp; Information Science, Indiana University</publisher>
+			  <pubPlace>Bloomington, IN</pubPlace>
+				<availability status="free">
+					<p>Copyright © 2012. TEI Boilerplate</p>
+					<p>
+					<ref n="license" target="http://creativecommons.org/licenses/by/3.0/"><figure rend="border-width:0;"><figDesc>Creative Commons License</figDesc><graphic url="http://i.creativecommons.org/l/by/3.0/80x15.png"/></figure></ref><lb />TEI Boilerplate is licensed under a <ref n="license" target="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</ref>.
+					</p>
+				</availability>
+			</publicationStmt>
+			<sourceDesc>
+			<!-- For born digital documents, use something like: -->
+                 <p>This TEI/XML document is the original source</p>
+         	<!-- For documents transcribed from another source or sources, use <biblStruct>. -->
+         	<!--
+				<biblStruct>
+					<analytic>
+						<author>
+						</author>
+						<title>
+						</title>
+					</analytic>
+					<monogr>
+						<editor>
+						</editor>
+						<title>
+						</title>
+						<imprint>
+							<pubPlace>
+							</pubPlace>
+							<publisher>
+							</publisher>
+							<date when="2011" /> 
+						</imprint>
+					</monogr>
+				</biblStruct>
+			-->
+			<!-- The loosely structured <bibl> is also an option -->
+			<!--
+			<bibl></bibl>
+			-->
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<tagsDecl>	
 				<!-- Basic text formatting: bold, italic, underline, "normal," etc. -->
-			    <rendition xml:id="blue" scheme="css">
-			    	    color:blue;
-			  	</rendition>
-				
-				<rendition xml:id="red" scheme="css">
-			    	    color:red;
-			  	</rendition>
-
+			  <rendition xml:id="blue" scheme="css">
+			    color:blue;
+			  </rendition>
 				<rendition xml:id="b" n="teibp:bold" scheme="css">
 					font-weight:bold;
 				</rendition> 
-			
+				
 				<rendition xml:id="i" n="teibp:italic" scheme="css">
 					font-style:italic;
 				</rendition> 
@@ -251,21 +285,14 @@
 					content:">";
 				</rendition>
 			</tagsDecl>
-     </encodingDesc>
-  </teiHeader>
-   <text>
-      <body>
-         <pb n="1 recto" facs="../../assets/images/Machaut.JPEG" />
-         <head><hi rendition="#blue #fs24pt">L</hi><hi rendition="#small-caps #red">e</hi><hi rendition="#red"> remede de Fortune</hi></head>
-
-         <lb/><l n="1">Cilz qui ueult
-         <lb/>aucun art aprendre</l>
-         <lb/><l n="2">A .xii. choses 
-            <lb/>doit entendre.</l>
-         <lb/><l n="3">La premiere est
-            <lb/>quil soit eslire.</l>
-         <lb/><l n="4">Celui ou ses cuers miex le tire</l>
-         <lb/>
-      </body>
-  </text>
+		</encodingDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div>
+				<head>What is this?</head>
+				<p rendition="#b #i">This file (<ref target="http://dcl.slis.indiana.edu/teibp/content/teibp.xml">teibp.xml</ref>) is a simple TEI P5 template that includes a set of generally useful <ref target="teibpstyles.xml"><gi>rendition</gi> styles</ref> for use with <ref target="http://dcl.slis.indiana.edu/teibp/">TEI Boilerplate</ref>. These styles are documented in: <ref target="teibpstyles.xml">Styles available in the TEI Boilerplate Template</ref>.</p>
+			</div>
+		</body>
+	</text>
 </TEI>
