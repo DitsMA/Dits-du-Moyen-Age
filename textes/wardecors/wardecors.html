@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	@@include('./fragments/head.html', {
+    "title": "[Dit du Wardecors]",
+"description": "[dit du Wardecors]"
+})
+    
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								@@include('./fragments/header.html')
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Baudouin de Condé, <cite>Dit du wardecors / Dit du Garde-Corps</cite></h1>
+									</header>
+
+<div id="viewer"></div>
+    <script type="text/javascript">
+      $(function() {
+      Mirador({
+id: "viewer",
+  data: [{
+  manifestUri: "https://gallica.bnf.fr/iiif/ark:/12148/btv1b55003999w/manifest.json", 
+  location: "BnF" 
+  }],
+  windowObjects: [{
+  loadedManifest: "https://gallica.bnf.fr/iiif/ark:/12148/btv1b55003999w/manifest.json",
+  canvasID: "https://gallica.bnf.fr/iiif/ark:/12148/btv1b55003999w/canvas/canvas-8"",
+  viewType: "BookView"
+  }]
+});
+    </script>
+					
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					@@include('./fragments/sidebar.html')
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
