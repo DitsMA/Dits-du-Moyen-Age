@@ -258,7 +258,7 @@
          
           <h3>Études sur les Dits médiévaux</h3>
           
-<listBibl>
+<list>
  
     
 <item>  
@@ -685,11 +685,11 @@ coll. "Sapience",
 </bibl>
 </item> 
     
-        </listBibl>   
+        </list>   
     
 <h3>Études sur les genres littéraires médiévaux</h3>
    
-          <listBibl>
+          <list>
           
 <item>  
 <bibl>    
@@ -819,11 +819,11 @@ coll. "Poétique",
 </bibl>
 </item>
     
-              </listBibl>
+              </list>
               
 <h3>Éléments méthodologiques : pour étudier les dits dans leur contexte manuscrit</h3>
 
-          <listBibl>
+          <list>
           
 <item>  
 <bibl>    
@@ -895,7 +895,7 @@ coll. "Texte, codex & contexte",
        
     
     
-</listBibl>
+</list>
           
           
       </body>
