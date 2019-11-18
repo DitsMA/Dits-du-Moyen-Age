@@ -1,264 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="custom.xsl"?> 
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>Bibliographie</title>
-         </titleStmt>
-         <publicationStmt>
-            <p></p>
-         </publicationStmt>
-         <sourceDesc>
-            <p>This TEI/XML document is the original source</p>
-         </sourceDesc>
-      </fileDesc>
-      <encodingDesc xmlns="http://www.tei-c.org/ns/1.0">
-		<tagsDecl>	
-				<!-- Basic text formatting: bold, italic, underline, "normal," etc. -->
-			    <rendition xml:id="blue" scheme="css">
-			    	    color:blue;
-			  	</rendition>
-				
-				<rendition xml:id="red" scheme="css">
-			    	    color:red;
-			  	</rendition>
-
-				<rendition xml:id="b" n="teibp:bold" scheme="css">
-					font-weight:bold;
-				</rendition> 
-			
-				<rendition xml:id="i" n="teibp:italic" scheme="css">
-					font-style:italic;
-				</rendition> 
-				
-				<rendition xml:id="u" n="teibp:underline" scheme="css">
-					text-decoration:underline;
-				</rendition> 
-				
-				<rendition xml:id="n" n="teibp:normal" scheme="css">
-					font-weight:normal;
-					text-decoration:none;
-					font-style:normal;
-				</rendition>
-				
-				<rendition xml:id="mono" n="teibp:mono" scheme="css">
-					font-family:Monaco,Courier,monospace;
-				</rendition>
-				
-				<rendition xml:id="super" n="teibp:super" scheme="css">
-					vertical-align:super;
-					font-size:80%;
-				</rendition>
-				
-				<rendition xml:id="sub" n="teibp:sub" scheme="css">
-					vertical-align:sub;
-					font-size:80%;
-				</rendition>
-				
-				<rendition xml:id="lowercase" n="teibp:lowercase" scheme="css">
-					text-transform:lowercase;
-				</rendition>
-				
-				<rendition xml:id="uppercase" n="teibp:uppercase" scheme="css">
-					text-transform:uppercase;
-				</rendition>
-				
-				<rendition xml:id="capitalize" n="teibp:capitalize" scheme="css">
-					text-transform:capitalize;
-				</rendition>
-				
-				<rendition xml:id="small-caps" n="teibp:small-caps" scheme="css">
-					font-variant:small-caps;
-				</rendition>
-				
-				<!-- Blocks. -->
-				<rendition xml:id="block" n="teibp:block" scheme="css">
-					display:block;
-				</rendition> 
-				<rendition xml:id="block-margins" n="teibp:block-margins" scheme="css">
-					display:block;
-					margin-top:1em;
-					margin-bottom:1em;
-				</rendition>
-				<rendition xml:id="blockquote" n="teibp:blockquote" scheme="css">
-					display:block;
-					font-size:90%;
-					margin-left:3em;
-					padding-left:1em;
-					border-left: 1px solid gray;
-					margin-top:.75em;
-					margin-bottom:.75em;
-					padding-top:.75em;
-					padding-bottom:.75em;
-				</rendition>
-				
-				<rendition corresp="#blockquote" n="teibp:blockquote" scheme="css" scope="before">
-					<!-- This turns off the default generated quotes for block quotes. -->
-					content:"" !important;
-				</rendition>
-				
-				<rendition corresp="#blockquote" n="teibp:blockquote" scheme="css" scope="after">
-					<!-- This turns off the default generated quotes for block quotes. -->
-					content:"" !important;
-				</rendition>
-				
-				<rendition xml:id="codeblock" n="teibp:codeblock" scheme="css">
-					display: block;
-					font-size: 80%;
-					margin-left: 1em;
-					padding-left: 1em;
-					border-left: 1px solid gray;
-					margin-top: .75em;
-					margin-bottom: .75em;
-					padding-top: .75em;
-					padding-bottom: .75em;
-					font-family:Monaco,Courier,monospace;
-					white-space:pre;
-				</rendition>
-				
-				<!-- Inline -->
-				
-				<rendition xml:id="inline" n="teibp:inline" scheme="css">
-					display:inline;
-				</rendition>
-				
-				<!-- Alignment. -->
-				<rendition xml:id="center" n="teibp:center" scheme="css">
-					display:block;
-					text-align:center;
-					margin-left:auto;
-					margin-right:auto;
-				</rendition>
-				
-				<rendition xml:id="left" n="teibp:left" scheme="css">
-					text-align:left;
-				</rendition>
-				
-				<rendition xml:id="right" n="teibp:right" scheme="css">
-					text-align:right;
-				</rendition>
-				
-				<rendition xml:id="justify" n="teibp:justify" scheme="css">
-					text-align:justify;
-				</rendition>
-				
-				<rendition xml:id="center-block" n="teibp:center-block" scheme="css">
-					display:block;
-					margin-left:auto;
-					margin-right:auto;
-				</rendition>
-				
-				<!-- Indentation -->
-				<rendition xml:id="hang" n="teibp:hang" scheme="css">
-					display:block;
-					padding-left:2.5em;
-					text-indent:-2.5em;
-				</rendition>
-				
-				<!-- Indentation for verse lines. Results in a “hanging” indent if
-					the line wraps. -->
-				<rendition xml:id="l-indent-01" n="teibp:l-indent-01" scheme="css">
-					display:block;
-					padding-left:4em;
-					text-indent:-2em;
-				</rendition>
-				
-				<rendition xml:id="l-indent-02" n="teibp:l-indent-02" scheme="css">
-					display:block;
-					padding-left:6em;
-					text-indent:-2em;
-				</rendition>
-				
-				<rendition xml:id="l-indent-03" n="teibp:l-indent-03" scheme="css">
-					display:block;
-					padding-left:8em;
-					text-indent:-2em;
-				</rendition>
-				
-				<rendition xml:id="l-indent-04" n="teibp:l-indent-04" scheme="css">
-					display:block;
-					padding-left:10em;
-					text-indent:-2em;
-				</rendition>
-				
-				<rendition xml:id="l-indent-05" n="teibp:l-indent-05" scheme="css">
-					display:block;
-					padding-left:12em;
-					text-indent:-2em;
-				</rendition>
-				
-				<rendition xml:id="l-indent-06" n="teibp:l-indent-06" scheme="css">
-					display:block;
-					padding-left:14em;
-					text-indent:-2em;
-				</rendition>
-				
-				<rendition xml:id="l-indent-07" n="teibp:l-indent-07" scheme="css">
-					display:block;
-					padding-left:16em;
-					text-indent:-2em;
-				</rendition>
-				
-				<rendition xml:id="l-indent-08" n="teibp:l-indent-08" scheme="css">
-					display:block;
-					padding-left:18em;
-					text-indent:-2em;
-				</rendition>
-				
-				<rendition xml:id="indent" n="teibp:indent" scheme="css" scope="before">
-					/* text-indent:4em; */
-					/* The above method of describing an indentation for, say, a paragraph is preferred.
-					The method being used is in response to a bug in some browsers whereby a block
-					element, like a paragraph, is erroneously re-indented after interruption by another 
-					block element (like a list, which is valid inside a paragraph). */
-					content:"\A0\A0\A0\A0\A0\A0";
-				</rendition>
-				
-				<!-- font sizes -->
-				
-				<rendition xml:id="small" n="teibp:small" scheme="css">
-					font-size:90%;
-				</rendition>
-				
-				<rendition xml:id="x-small" n="teibp:x-small" scheme="css">
-					font-size:85%;
-				</rendition>
-				
-				<rendition xml:id="xx-small" n="teibp:xx-small" scheme="css">
-					font-size:80%;
-				</rendition>
-				
-				<rendition xml:id="large" n="teibp:large" scheme="css">
-					font-size:110%;
-				</rendition>
-				
-				<rendition xml:id="x-large" n="teibp:x-large" scheme="css">
-					font-size:115%;
-				</rendition>
-				
-				<rendition xml:id="xxx-large" n="teibp:xxx-large" scheme="css">
-					font-size:120%;
-				</rendition>
-				
-				<rendition xml:id="bracket" n="teibp:bracket" scheme="css"/>
-				
-				<rendition corresp="#bracket" n="teibp:bracket" scheme="css" scope="before">
-					content:"&lt;";
-				</rendition>
-				
-				<rendition corresp="#bracket" n="teibp:bracket" scheme="css" scope="after">
-					content:">";
-				</rendition>
-			</tagsDecl>
-     </encodingDesc>
-  </teiHeader>
-   <text>
-      <body>
+<tei>
          
           <h3>Études sur les Dits médiévaux</h3>
           
-<listBibl>
+<list>
  
     
 <item>  
@@ -291,7 +35,7 @@ coll. "Études",
 
 <item>  
 <bibl>    
-<author>BERGER Roger et DELMAIRE Bernard</author>, "Littérature et société arrageoises au XIII<sup>e</sup> siècle. Les chansons et dits artésiens", <cite>Revue du Nord. Histoire & Archéologie, nord de la France, Belgique, Pays-Bas</cite>,
+<author>BERGER Roger et DELMAIRE Bernard</author>, "Littérature et société arrageoises au XIII<sup>e</sup> siècle. Les chansons et dits artésiens", <cite>Revue du Nord. Histoire et Archéologie, nord de la France, Belgique, Pays-Bas</cite>,
 <biblScope type="vol">246</biblScope>
 <date>1980</date>
 <biblScope type="pages">711-715</biblScope>
@@ -352,7 +96,7 @@ coll. "Études",
 <author>CERQUIGLINI-TOULET Jacqueline</author>, "L’amour au secret. L’invention lyrique en 1300. Le cas de la Panthère d’amour", dans Hélène BELLON-MÉGUELLE, Olivier COLLET, Yasmina FOEHR-JANSSENS et Ludivine JAQUIÉRY (dir.), <cite>La Moisson des lettres. L’Invention littéraire autour de 1300</cite>,
 <pubPlace>Turnhout</pubPlace>
 <publisher>Brepols</publisher> 
-coll. "Texte, Codex & Contexte"
+coll. "Texte, Codex et Contexte"
 <date>2011</date>
 <biblScope type="pages">325-332</biblScope>
 </bibl>
@@ -525,7 +269,7 @@ coll. "Nouvelle Bibliothèque du Moyen Âge",
 <author>MORA Francine</author>, "Du Châtelain de Couci au Roman du Comte d’Anjou : du roman au dit", dans Hélène BELLON-MÉGUELLE, Olivier COLLET, Yasmina FOEHR-JANSSENS et Ludivine JAQUIÉRY (dir.), <cite>La Moisson des lettres. L’Invention littéraire autour de 1300</cite>,
 <pubPlace>Turnhout</pubPlace>
 <publisher>Brepols</publisher> 
-coll. "Texte, Codex & Contexte",
+coll. "Texte, Codex et Contexte",
 <date>2011</date>
 <biblScope type="pages">267-278</biblScope>
 </bibl>
@@ -685,11 +429,11 @@ coll. "Sapience",
 </bibl>
 </item> 
     
-        </listBibl>   
+        </list>   
     
 <h3>Études sur les genres littéraires médiévaux</h3>
    
-          <listBibl>
+          <list>
           
 <item>  
 <bibl>    
@@ -733,7 +477,7 @@ coll. "Rencontres, Civilisation médiévale",
 <author>GINGRAS Francis</author>, "Mise en recueil et typologie des genres aux XIII<sub>e</sub> et XIV<sub>e</sub> siècles : romans atypiques et recueils polygénériques (Biausdous, Cristal et Clarie, Durmart le Gallois, Mériadeuc)", dans Olivier COLLET et Yasmina FOEHR-JANSSENS (dir.), <cite>Le Recueil au Moyen Âge. Le Moyen Âge central</cite>,
 <pubPlace>Turnhout</pubPlace>
 <publisher>Brepols</publisher> 
-coll. "Texte, codex & contexte",
+coll. "Texte, codex et contexte",
 <date>2010</date>
 <biblScope type="pages">91-111</biblScope>
 </bibl>
@@ -819,11 +563,11 @@ coll. "Poétique",
 </bibl>
 </item>
     
-              </listBibl>
+              </list>
               
 <h3>Éléments méthodologiques : pour étudier les dits dans leur contexte manuscrit</h3>
 
-          <listBibl>
+          <list>
           
 <item>  
 <bibl>    
@@ -858,7 +602,7 @@ coll. "Faux titre",
 <author>COLLET Olivier et FOEHR-JANSSENS Yasmina (dir.)</author>, <cite>Le Recueil au Moyen Âge. Le Moyen Âge central</cite>,
 <pubPlace>Turnhout</pubPlace>
 <publisher>Brepols</publisher> 
-coll. "Texte, codex & contexte",
+coll. "Texte, codex et contexte",
 <date>2010</date>
 </bibl>
 </item>
@@ -888,16 +632,15 @@ coll. "Medievalia"
 <author>VAN HEMELRYCK Tania et MARZANO Stefania (dir.)</author>, <cite>Le Recueil au Moyen Âge. La fin du Moyen Âge</cite>,
 <pubPlace>Turnhout</pubPlace>
 <publisher>Brepols</publisher> 
-coll. "Texte, codex & contexte",
+coll. "Texte, codex et contexte",
 <date>2010</date>
 </bibl>
 </item>
        
     
     
-</listBibl>
+</list>
           
-          
-      </body>
-  </text>
-</TEI>
+            
+  
+</tei>
