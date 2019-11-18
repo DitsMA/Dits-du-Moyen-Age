@@ -1880,7 +1880,7 @@ a:hover {
   color: #993300;
 }
 .eg-text {
-  color: #292929;
+  color: #000000;
 }
 /* loading animation */
 #loading {
@@ -1915,7 +1915,7 @@ div.facsImage img:first-child {
   margin-top: 0;
 }
 .head-font {
-  font-family: Arvo, sans-serif;
+  font-family: Times;
   font-weight: normal;
 }
 
