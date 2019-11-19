@@ -1,0 +1,1281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="custom.xsl"?> 
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Liste des manuscrits</title>
+         </titleStmt>
+         <publicationStmt>
+            <p></p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This TEI/XML document is the original source</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc xmlns="http://www.tei-c.org/ns/1.0">
+		<tagsDecl>	
+				<!-- Basic text formatting: bold, italic, underline, "normal," etc. -->
+			    <rendition xml:id="blue" scheme="css">
+			    	    color:blue;
+			  	</rendition>
+				
+				<rendition xml:id="red" scheme="css">
+			    	    color:red;
+			  	</rendition>
+
+				<rendition xml:id="b" n="teibp:bold" scheme="css">
+					font-weight:bold;
+				</rendition> 
+			
+				<rendition xml:id="i" n="teibp:italic" scheme="css">
+					font-style:italic;
+				</rendition> 
+				
+				<rendition xml:id="u" n="teibp:underline" scheme="css">
+					text-decoration:underline;
+				</rendition> 
+				
+				<rendition xml:id="n" n="teibp:normal" scheme="css">
+					font-weight:normal;
+					text-decoration:none;
+					font-style:normal;
+				</rendition>
+				
+				<rendition xml:id="mono" n="teibp:mono" scheme="css">
+					font-family:Monaco,Courier,monospace;
+				</rendition>
+				
+				<rendition xml:id="super" n="teibp:super" scheme="css">
+					vertical-align:super;
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="sub" n="teibp:sub" scheme="css">
+					vertical-align:sub;
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="lowercase" n="teibp:lowercase" scheme="css">
+					text-transform:lowercase;
+				</rendition>
+				
+				<rendition xml:id="uppercase" n="teibp:uppercase" scheme="css">
+					text-transform:uppercase;
+				</rendition>
+				
+				<rendition xml:id="capitalize" n="teibp:capitalize" scheme="css">
+					text-transform:capitalize;
+				</rendition>
+				
+				<rendition xml:id="small-caps" n="teibp:small-caps" scheme="css">
+					font-variant:small-caps;
+				</rendition>
+				
+				<!-- Blocks. -->
+				<rendition xml:id="block" n="teibp:block" scheme="css">
+					display:block;
+				</rendition> 
+				<rendition xml:id="block-margins" n="teibp:block-margins" scheme="css">
+					display:block;
+					margin-top:1em;
+					margin-bottom:1em;
+				</rendition>
+				<rendition xml:id="blockquote" n="teibp:blockquote" scheme="css">
+					display:block;
+					font-size:90%;
+					margin-left:3em;
+					padding-left:1em;
+					border-left: 1px solid gray;
+					margin-top:.75em;
+					margin-bottom:.75em;
+					padding-top:.75em;
+					padding-bottom:.75em;
+				</rendition>
+				
+				<rendition corresp="#blockquote" n="teibp:blockquote" scheme="css" scope="before">
+					<!-- This turns off the default generated quotes for block quotes. -->
+					content:"" !important;
+				</rendition>
+				
+				<rendition corresp="#blockquote" n="teibp:blockquote" scheme="css" scope="after">
+					<!-- This turns off the default generated quotes for block quotes. -->
+					content:"" !important;
+				</rendition>
+				
+				<rendition xml:id="codeblock" n="teibp:codeblock" scheme="css">
+					display: block;
+					font-size: 80%;
+					margin-left: 1em;
+					padding-left: 1em;
+					border-left: 1px solid gray;
+					margin-top: .75em;
+					margin-bottom: .75em;
+					padding-top: .75em;
+					padding-bottom: .75em;
+					font-family:Monaco,Courier,monospace;
+					white-space:pre;
+				</rendition>
+				
+				<!-- Inline -->
+				
+				<rendition xml:id="inline" n="teibp:inline" scheme="css">
+					display:inline;
+				</rendition>
+				
+				<!-- Alignment. -->
+				<rendition xml:id="center" n="teibp:center" scheme="css">
+					display:block;
+					text-align:center;
+					margin-left:auto;
+					margin-right:auto;
+				</rendition>
+				
+				<rendition xml:id="left" n="teibp:left" scheme="css">
+					text-align:left;
+				</rendition>
+				
+				<rendition xml:id="right" n="teibp:right" scheme="css">
+					text-align:right;
+				</rendition>
+				
+				<rendition xml:id="justify" n="teibp:justify" scheme="css">
+					text-align:justify;
+				</rendition>
+				
+				<rendition xml:id="center-block" n="teibp:center-block" scheme="css">
+					display:block;
+					margin-left:auto;
+					margin-right:auto;
+				</rendition>
+				
+				<!-- Indentation -->
+				<rendition xml:id="hang" n="teibp:hang" scheme="css">
+					display:block;
+					padding-left:2.5em;
+					text-indent:-2.5em;
+				</rendition>
+				
+				<!-- Indentation for verse lines. Results in a “hanging” indent if
+					the line wraps. -->
+				<rendition xml:id="l-indent-01" n="teibp:l-indent-01" scheme="css">
+					display:block;
+					padding-left:4em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-02" n="teibp:l-indent-02" scheme="css">
+					display:block;
+					padding-left:6em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-03" n="teibp:l-indent-03" scheme="css">
+					display:block;
+					padding-left:8em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-04" n="teibp:l-indent-04" scheme="css">
+					display:block;
+					padding-left:10em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-05" n="teibp:l-indent-05" scheme="css">
+					display:block;
+					padding-left:12em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-06" n="teibp:l-indent-06" scheme="css">
+					display:block;
+					padding-left:14em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-07" n="teibp:l-indent-07" scheme="css">
+					display:block;
+					padding-left:16em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-08" n="teibp:l-indent-08" scheme="css">
+					display:block;
+					padding-left:18em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="indent" n="teibp:indent" scheme="css" scope="before">
+					/* text-indent:4em; */
+					/* The above method of describing an indentation for, say, a paragraph is preferred.
+					The method being used is in response to a bug in some browsers whereby a block
+					element, like a paragraph, is erroneously re-indented after interruption by another 
+					block element (like a list, which is valid inside a paragraph). */
+					content:"\A0\A0\A0\A0\A0\A0";
+				</rendition>
+				
+				<!-- font sizes -->
+				
+				<rendition xml:id="small" n="teibp:small" scheme="css">
+					font-size:90%;
+				</rendition>
+				
+				<rendition xml:id="x-small" n="teibp:x-small" scheme="css">
+					font-size:85%;
+				</rendition>
+				
+				<rendition xml:id="xx-small" n="teibp:xx-small" scheme="css">
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="large" n="teibp:large" scheme="css">
+					font-size:110%;
+				</rendition>
+				
+				<rendition xml:id="x-large" n="teibp:x-large" scheme="css">
+					font-size:115%;
+				</rendition>
+				
+				<rendition xml:id="xxx-large" n="teibp:xxx-large" scheme="css">
+					font-size:120%;
+				</rendition>
+				
+				<rendition xml:id="bracket" n="teibp:bracket" scheme="css"/>
+				
+				<rendition corresp="#bracket" n="teibp:bracket" scheme="css" scope="before">
+					content:"&lt;";
+				</rendition>
+				
+				<rendition corresp="#bracket" n="teibp:bracket" scheme="css" scope="after">
+					content:">";
+				</rendition>
+			</tagsDecl>
+     </encodingDesc>
+  </teiHeader>
+   <text>
+      <body>
+         
+             <h3>Baudouin de Condé, <i>Dit du wardecors</i>/<i>Dit du Garde-Corps</i></h3>
+  
+<list>  
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Bruxelles</settlement>
+    <repository>KBR</repository>
+    <idno>9411-9426</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Arsenal</repository>
+    <idno>3142</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Arsenal</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+            <idno>1446</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+            <idno>1634</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+            <idno>12467</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+ <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Turin</settlement>
+    <repository>Biblioteca nazionale universitaria</repository>
+            <idno> L. V. 32</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+</list>   
+    
+    <h3>Baudouin de Condé, <i>Dit du dragon</i></h3>
+ 
+    <list>
+ <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Bruxelles</settlement>
+    <repository>KBR</repository>
+    <idno>9411-9426</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Arsenal</repository>
+    <idno>3142</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Arsenal</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+            <idno>1446</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+            <idno>1634</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+            <idno>12467</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+        
+        <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Turin</settlement>
+    <repository>Biblioteca nazionale universitaria</repository>
+            <idno> L. V. 32</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+        </list>   
+    
+    <h3>Baudouin de Condé, <i>Conte de gentilleche</i>  </h3>  
+
+<list>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Bruxelles</settlement>
+    <repository>KBR</repository>
+    <idno>9411-9426</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Arsenal</repository>
+    <idno>3142</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Arsenal</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+            <idno>837</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+            <idno>1446</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+            <idno>1634</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+            <idno>12467</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Turin</settlement>
+    <repository>Biblioteca nazionale universitaria</repository>
+            <idno> L. V. 32</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    </list>   
+    
+    <h3>Baudouin de Condé, <i>Conte de l'olifant</i></h3>
+    
+        <list>
+    
+       <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+            <idno>1634</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+            </list>
+    
+    <h3>Baudouin de Condé, <i>Dit de la Rose</i></h3>
+    
+<list>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Bruxelles</settlement>
+    <repository>KBR</repository>
+    <idno>9411-9426</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Dijon</settlement>
+    <repository>Bibliothèque municipale</repository>
+    <idno>526 (299)</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Arsenal</repository>
+    <idno>3142</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+            <idno>1446</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+       <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Turin</settlement>
+    <repository>Biblioteca nazionale universitaria</repository>
+            <idno> L. V. 32</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    </list>
+
+    <h3>Christine de Pizan, <i>Dit de la Rose</i></h3> 
+
+<list>
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Chantilly</settlement>
+    <repository>Bibliothèque du Château (Musée Condé)</repository>
+    <idno>492-493(1667-1668)</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+ 
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement>   
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>12779</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>604</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Baltimore</settlement>
+    <repository>Walters Art Gallery</repository>
+    <idno>W 316 (De Ricci 510)</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+</list>   
+    
+<h3><i>Le Remede de Fortune</i></h3>
+    
+<list>
+    
+    <item>
+        <msDesc>
+            <msIdentifier>
+    <settlement>Aberystwyth</settlement> 
+    <repository>National Library of Wales</repository>
+    <idno>5010C</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+            <msIdentifier>
+<settlement>Bern</settlement>
+    <repository>Burgerbibliothek</repository>
+    <idno>Cod. 218</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+            <msIdentifier>
+<settlement>Cambridge</settlement> 
+    <institution>Corpus Christi College</institution>
+    <repository>Parker Library</repository>            
+    <collection>Ferrel</collection> 
+    <idno>1</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+            <msIdentifier>
+<settlement>Cambridge</settlement> 
+    <repository>Magdalene College</repository>
+    <collection>Pepys</collection> 
+    <idno>1594</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+            <msIdentifier>
+<settlement>New York</settlement>
+    <repository>Morgan Library and Museum</repository>
+    <idno>396</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+     <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque de l'Arsenal</repository>
+    <idno>5203</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+       <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>843</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+       <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>1584</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+       <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>1585</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+       <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>1586</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+       <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>9221</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+       <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>22545</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+</list>
+ 
+<h3>Jean de Condé, <i>Dit d'entendement</i></h3>    
+  
+<list>
+  
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque de l'Arsenal</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+        <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>1446</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+</list>   
+    
+<h3>Jean de Condé, <i>Dit de deus loiaus compaignons</i></h3>
+   
+<list>
+   
+   <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque de l'Arsenal</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>1446</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+        
+     <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>24432</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+
+    </list>
+
+<h3>Jean de Condé, <i>Dit de Franchise</i></h3>    
+
+<list>
+
+     <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque de l'Arsenal</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+        
+     <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>1446</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+  
+</list>  
+    
+<h3>Jean de Condé, <i>Dit du roi et des ermites</i></h3>    
+
+<list>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+    <settlement>Roma</settlement> 
+    <repository>Biblioteca Casanatense</repository>
+    <idno>1598 (B.III.18)</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+</list>
+    
+<h3>Jean de Condé, <i>La messe des oiseaux</i></h3>
+  
+<list>
+    
+  <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque de l'Arsenal</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+        
+     <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>1446</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+</list>
+    
+<h3>Jean de Condé, <i>Dit des Jacobins et des Fremeneurs</i></h3>
+    
+<list>
+    
+      <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque de l'Arsenal</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+        
+     <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>1446</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+</list>
+    
+<h3>Jean de Condé, <i>Du clerc qui fut repus deriere l'escring</i></h3>
+    
+<list>
+    
+      <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque de l'Arsenal</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>1446</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+   
+</list>
+    
+<h3>Jean de Saint-Quentin, <i>Dit du buef</i></h3>    
+    
+<list>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>24432</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+</list>
+    
+<h3>Jean de Saint-Quentin, <i>Dit des trois chanoinnes</i></h3>    
+
+<list>
+
+     <item>
+    <msDesc>
+        <msIdentifier>
+     <settlement>Paris</settlement> 
+     <repository>Bibliothèque nationale de France</repository>
+     <collection>français</collection> 
+     <idno>24432</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+   
+</list>
+   
+<h3>Nicole de Margival, <i>Dit de la panthère d'amour</i></h3>
+  
+<list>
+
+    <item>
+        <msDesc>
+            <msIdentifier> 
+    <settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+     <collection>français</collection> 
+     <idno>24432</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+    
+      <item>
+          <msDesc>
+            <msIdentifier> 
+<settlement>Sankt-Peterburg</settlement> 
+    <repository>National Library of Russia</repository>
+    <idno>0003</idno>
+              </msIdentifier>
+          </msDesc>
+    </item>
+
+</list>
+
+<h3>Ci nous dit </h3>
+    
+<list>
+    
+    <item>
+        <msDesc>
+            <msIdentifier>
+    <settlement>Besançon </settlement>
+    <repository>Bibliothèque municipale</repository>        
+    <collection>français</collection>
+    <idno>0257</idno>
+            </msIdentifier>
+        </msDesc>
+     </item>
+         
+     <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Bruxelles </settlement>
+    <repository>KBR</repository>
+    <idno>9017 </idno>
+            </msIdentifier>
+         </msDesc>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Bruxelles </settlement> 
+    <repository>KBR</repository>
+    <idno>10388 </idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Bruxelles </settlement>
+    <repository>KBR</repository>
+    <idno>7831 </idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Caen </settlement> 
+    <repository>Bibliothèque municipale</repository>
+    <collection>français</collection> 
+    <idno>262 </idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Paris </settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>10038</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>11201 </idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Chantilly</settlement>
+    <repository>Bibliothèque du Château (Musée Condé)</repository>
+    <idno>0026 </idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Chantilly</settlement> 
+    <repository>Bibliothèque du Château (Musée Condé)</repository>
+    <idno>0027 </idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Hamburg</settlement> 
+    <repository>Staats-und Universitätsbibliothek</repository>
+    <idno>001 </idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>London</settlement> 
+    <repository>Bristish Library</repository>
+    <collection>Harley</collection>
+    <idno>4403 </idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Oxford</settlement> 
+    <repository>Bodleian Library</repository>
+    <collection>Rawlison</collection> 
+    <idno>D.659 </idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement>
+    <repository>Bibliothèque de l'Arsenal</repository>
+    <idno>2059</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>425</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+    <idno>436</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+    <idno>9567 </idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+    <idno>17059 </idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>17060</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>20110</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+    <idno>24285</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection>
+    <idno>11273</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France</repository>
+    <collection>français</collection> 
+    <idno>11273</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement>
+    <repository>Bibliothèque Sainte-Geneviève</repository>
+    <idno>1465 </idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Reims</settlement> 
+    <repository>Bibliothèque municipale</repository>
+    <idno>614 (F.435) </idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    </list>    
+
+          
+
+          
+          
+      </body>
+  </text>
+</TEI>
