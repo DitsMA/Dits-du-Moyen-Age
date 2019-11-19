@@ -259,7 +259,7 @@
              <h3>Baudouin de Condé, <i>Dit du wardecors</i>/<i>Dit du Garde-Corps</i></h3>
   
 <list>  
-    <item>
+    <item>  
     <msDesc>
         <msIdentifier>
     <settlement>Bruxelles</settlement>
@@ -270,6 +270,7 @@
     </item>
     
     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b55003999w/f1.image">
     <msDesc>
         <msIdentifier>
     <settlement>Paris</settlement>
@@ -277,6 +278,7 @@
     <idno>3142</idno>
         </msIdentifier>
         </msDesc>
+    </a>   
     </item>
     
     <item>
@@ -290,6 +292,7 @@
     </item>
     
      <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b10023851v/f1.image">
     <msDesc>
         <msIdentifier>
     <settlement>Paris</settlement>
@@ -298,9 +301,11 @@
             <idno>1446</idno>
         </msIdentifier>
         </msDesc>
+    </a>
     </item>
     
      <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b8449695h">
     <msDesc>
         <msIdentifier>
     <settlement>Paris</settlement>
@@ -309,9 +314,11 @@
             <idno>1634</idno>
         </msIdentifier>
         </msDesc>
+    </a>
     </item>
     
      <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b9006877g">    
     <msDesc>
         <msIdentifier>
     <settlement>Paris</settlement>
@@ -320,6 +327,7 @@
             <idno>12467</idno>
         </msIdentifier>
         </msDesc>
+    </a>
     </item>
     
  <item>
