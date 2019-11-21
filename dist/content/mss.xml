@@ -250,13 +250,16 @@
 				<rendition corresp="#bracket" n="teibp:bracket" scheme="css" scope="after">
 					content:">";
 				</rendition>
+		    
+		    
 			</tagsDecl>
      </encodingDesc>
   </teiHeader>
    <text>
       <body>
          
-             <h3>Baudouin de Condé, <i>Dit du wardecors</i>/<i>Dit du Garde-Corps</i></h3>
+          <div type="section">
+             <head>Baudouin de Condé, <title>Dit du wardecors</title>/<title>Dit du Garde-Corps</title></head>
   
 <list>  
     <item>  
@@ -271,15 +274,17 @@
     
     <item>
     <a href="https://gallica.bnf.fr/ark:/12148/btv1b55003999w/f1.image">
-    <msDesc>
+        <item>
+        <msDesc>
         <msIdentifier>
     <settlement>Paris,</settlement>
     <repository>Arsenal,</repository>
     <idno>3142</idno>
         </msIdentifier>
         </msDesc>
-    </a>   
     </item>
+            </a>   
+    
     
     <item>
     <msDesc>
@@ -341,7 +346,10 @@
     </item>
 </list>   
     
-    <h3>Baudouin de Condé, <i>Dit du dragon</i></h3>
+          </div>
+          
+          <div type="section">  
+    <head>Baudouin de Condé, <title>Dit du dragon</title></head>
  
     <list>
  <item>
@@ -426,8 +434,9 @@
     </item>
     
         </list>   
-    
-    <h3>Baudouin de Condé, <i>Conte de gentilleche</i>  </h3>  
+ 
+ 
+    <head>Baudouin de Condé, <title>Conte de gentilleche</title>  </head>  
 
 <list>
     
@@ -527,7 +536,7 @@
     
     </list>   
     
-    <h3>Baudouin de Condé, <i>Conte de l'olifant</i></h3>
+    <head>Baudouin de Condé, <title>Conte de l'olifant</title></head>
     
         <list>
     
@@ -546,7 +555,7 @@
     
             </list>
     
-    <h3>Baudouin de Condé, <i>Dit de la Rose</i></h3>
+    <head>Baudouin de Condé, <title>Dit de la Rose</title></head>
     
 <list>
     
@@ -609,7 +618,7 @@
     
     </list>
 
-    <h3>Christine de Pizan, <i>Dit de la Rose</i></h3> 
+    <head>Christine de Pizan, <title>Dit de la Rose</title></head> 
 
 <list>
     <item>
@@ -661,8 +670,10 @@
     </item>
 
 </list>   
-    
-<h3>Guillaume de Machaut, <i>Le Remede de Fortune</i></h3>
+</div>
+          
+          <div type=section>   
+<head>Guillaume de Machaut, <title>Le Remede de Fortune</title></head>
     
 <list>
     
@@ -816,7 +827,7 @@
 </list>
           
        
-              <h3>Hélinand de Froidmont, <i>Vers de la mort</i></h3>
+              <head>Hélinand de Froidmont, <title>Vers de la mort</title></head>
          
           <list>
     
@@ -1212,7 +1223,7 @@
               
           </list>             
               
-          <h3>Jean Renart, <hi>L'Escoufle</hi></h3>
+          <head>Jean Renart, <hi>L'Escoufle</hi></head>
           
        <list>   
           <item>
@@ -1235,7 +1246,7 @@
               </msDesc>
           </item>
           
-          <h3>Jean Bodel, <hi>Congés</hi></h3>
+          <head>Jean Bodel, <hi>Congés</hi></head>
           
           
           <item>
@@ -1343,7 +1354,7 @@
       </list>
           
  
-<h3>Jean de Condé, <i>Dit d'entendement</i></h3>    
+<head>Jean de Condé, <title>Dit d'entendement</title></head>    
   
 <list>
   
@@ -1371,8 +1382,10 @@
     </item>
     
 </list>   
-    
-<h3>Jean de Condé, <i>Dit de deus loiaus compaignons</i></h3>
+</div>
+          
+          <div type=section>   
+<head>Jean de Condé, <title>Dit de deus loiaus compaignons</title></head>
    
 <list>
    
@@ -1413,9 +1426,13 @@
     </a>
     </item>
 
-    </list>
+    </list>   
+</div>
+          
+          <div type=section>
 
-<h3>Jean de Condé, <i>Dit de Franchise</i></h3>    
+
+<head>Jean de Condé, <title>Dit de Franchise</title></head>    
 
 <list>
 
@@ -1443,9 +1460,12 @@
     </a>
     </item>
   
-</list>  
+</list>   
+</div>
+          
+          <div type=section>  
     
-<h3>Jean de Condé, <i>Dit du roi et des ermites</i></h3>    
+<head>Jean de Condé, <title>Dit du roi et des ermites</title></head>    
 
 <list>
 
@@ -1459,9 +1479,12 @@
         </msDesc>
     </item>
 
-</list>
+</list>   
+</div>
+          
+          <div type=section>
     
-<h3>Jean de Condé, <i>La messe des oiseaux</i></h3>
+<head>Jean de Condé, <title>La messe des oiseaux</title></head>
   
 <list>
     
@@ -1489,9 +1512,12 @@
     </a>
     </item>
     
-</list>
+</list>   
+</div>
+          
+          <div type=section>
     
-<h3>Jean de Condé, <i>Dit des Jacobins et des Fremeneurs</i></h3>
+<head>Jean de Condé, <title>Dit des Jacobins et des Fremeneurs</title></head>
     
 <list>
     
@@ -1519,9 +1545,12 @@
     </a>
     </item>
     
-</list>
+</list>   
+</div>
+          
+          <div type=section>
     
-<h3>Jean de Condé, <i>Du clerc qui fut repus deriere l'escring</i></h3>
+<head>Jean de Condé, <title>Du clerc qui fut repus deriere l'escring</title></head>
     
 <list>
     
@@ -1548,9 +1577,12 @@
     </a>
     </item>
    
-</list>
+</list>   
+</div>
+          
+          <div type=section>
     
-<h3>Jean de Saint-Quentin, <i>Dit du buef</i></h3>    
+<head>Jean de Saint-Quentin, <title>Dit du buef</title></head>    
     
 <list>
     
@@ -1567,9 +1599,12 @@
     </a>
     </item>
 
-</list>
+</list>   
+</div>
+          
+          <div type=section>
     
-<h3>Jean de Saint-Quentin, <i>Dit des trois chanoinnes</i></h3>    
+<head>Jean de Saint-Quentin, <title>Dit des trois chanoinnes</title></head>    
 
 <list>
 
@@ -1586,9 +1621,12 @@
     </a>
     </item>
    
-</list>
+</list>   
+</div>
+          
+          <div type=section>
    
-<h3>Nicole de Margival, <i>Dit de la panthère d'amour</i></h3>
+<head>Nicole de Margival, <title>Dit de la panthère d'amour</title></head>
   
 <list>
 
@@ -1615,10 +1653,13 @@
           </msDesc>
     </item>
 
-</list>
+</list>   
+</div>
+          
+          <div type=section>
 
 
-          <h3>Raoul de Houdenc, <hi>Roman des eles</hi></h3>
+          <head>Raoul de Houdenc, <hi>Roman des eles</hi></head>
           
           <list>    
               <item>
@@ -1709,9 +1750,12 @@
                   </msDesc>
               </item>
               
-          </list>
+          </list>   
+</div>
+          
+          <div type=section>
 
-          <h3>Raoul de Houdenc, <hi>Songe d'Enfer</hi></h3>
+          <head>Raoul de Houdenc, <hi>Songe d'Enfer</hi></head>
           
         <list>  
           <item>
@@ -1827,9 +1871,12 @@
                   </msIdentifier>
               </msDesc>
           </item>
-      </list>
+      </list>   
+</div>
+          
+          <div type=section>
 
-          <h3>Raoul de Houdenc, <i>Dit</i></h3>
+          <head>Raoul de Houdenc, <title>Dit</title></head>
           
           <list>
               <item>
@@ -1852,9 +1899,12 @@
                   </msDesc>
               </item>
               
-          </list>
+          </list>   
+</div>
           
-          <h3>Raoul de Houdenc, <i>Voie du Paradis</i></h3>
+          <div type=section>
+          
+          <head>Raoul de Houdenc, <title>Voie du Paradis</title></head>
           
           <list>
               <item>
@@ -1889,9 +1939,12 @@
                   </msDesc>
               </item>
               
-          </list>
+          </list>   
+</div>
+          
+          <div type=section>
 
-          <h3>Thibaut de Marly, <i>Vers</i></h3>
+          <head>Thibaut de Marly, <title>Vers</title></head>
           
      <list>     
           <item>
@@ -1939,10 +1992,13 @@
                   </msDesc>
               </a>
           </item>
-      </list>
+      </list>   
+</div>
+          
+          <div type=section>
 
 
-<h3>Ci nous dit </h3>
+<head>Ci nous dit </head>
     
 <list>
     
@@ -2210,7 +2266,11 @@
     
     </list>    
 
-          <h3><hi>Débat de l'hiver et de l'été</hi></h3>
+          </div>
+          
+          <div type=section>
+              
+          <head><hi>Débat de l'hiver et de l'été</hi></head>
           
       <list>  
           <item>
@@ -2224,8 +2284,13 @@
           </item>
       </list>  
 
-          <h3><i>Roman des romans</i>/</h3>
-      <list>    
+</div>
+
+ <div type=section>
+     
+          <head><title>Roman des romans</title>/</head>
+      
+                 <list>    
           <item>
               <msDesc>
                   <msIdentifier>
@@ -2337,7 +2402,7 @@
           </item>
           
       </list>
-          
+ </div>         
           
       </body>
   </text>
