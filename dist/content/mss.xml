@@ -1,0 +1,2409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="custom.xsl"?> 
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Liste des manuscrits</title>
+         </titleStmt>
+         <publicationStmt>
+            <p></p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This TEI/XML document is the original source</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc xmlns="http://www.tei-c.org/ns/1.0">
+		<tagsDecl>	
+				<!-- Basic text formatting: bold, italic, underline, "normal," etc. -->
+			    <rendition xml:id="blue" scheme="css">
+			    	    color:blue;
+			  	</rendition>
+				
+				<rendition xml:id="red" scheme="css">
+			    	    color:red;
+			  	</rendition>
+
+				<rendition xml:id="b" n="teibp:bold" scheme="css">
+					font-weight:bold;
+				</rendition> 
+			
+				<rendition xml:id="i" n="teibp:italic" scheme="css">
+					font-style:italic;
+				</rendition> 
+				
+				<rendition xml:id="u" n="teibp:underline" scheme="css">
+					text-decoration:underline;
+				</rendition> 
+				
+				<rendition xml:id="n" n="teibp:normal" scheme="css">
+					font-weight:normal;
+					text-decoration:none;
+					font-style:normal;
+				</rendition>
+				
+				<rendition xml:id="mono" n="teibp:mono" scheme="css">
+					font-family:Monaco,Courier,monospace;
+				</rendition>
+				
+				<rendition xml:id="super" n="teibp:super" scheme="css">
+					vertical-align:super;
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="sub" n="teibp:sub" scheme="css">
+					vertical-align:sub;
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="lowercase" n="teibp:lowercase" scheme="css">
+					text-transform:lowercase;
+				</rendition>
+				
+				<rendition xml:id="uppercase" n="teibp:uppercase" scheme="css">
+					text-transform:uppercase;
+				</rendition>
+				
+				<rendition xml:id="capitalize" n="teibp:capitalize" scheme="css">
+					text-transform:capitalize;
+				</rendition>
+				
+				<rendition xml:id="small-caps" n="teibp:small-caps" scheme="css">
+					font-variant:small-caps;
+				</rendition>
+				
+				<!-- Blocks. -->
+				<rendition xml:id="block" n="teibp:block" scheme="css">
+					display:block;
+				</rendition> 
+				<rendition xml:id="block-margins" n="teibp:block-margins" scheme="css">
+					display:block;
+					margin-top:1em;
+					margin-bottom:1em;
+				</rendition>
+				<rendition xml:id="blockquote" n="teibp:blockquote" scheme="css">
+					display:block;
+					font-size:90%;
+					margin-left:3em;
+					padding-left:1em;
+					border-left: 1px solid gray;
+					margin-top:.75em;
+					margin-bottom:.75em;
+					padding-top:.75em;
+					padding-bottom:.75em;
+				</rendition>
+				
+				<rendition corresp="#blockquote" n="teibp:blockquote" scheme="css" scope="before">
+					<!-- This turns off the default generated quotes for block quotes. -->
+					content:"" !important;
+				</rendition>
+				
+				<rendition corresp="#blockquote" n="teibp:blockquote" scheme="css" scope="after">
+					<!-- This turns off the default generated quotes for block quotes. -->
+					content:"" !important;
+				</rendition>
+				
+				<rendition xml:id="codeblock" n="teibp:codeblock" scheme="css">
+					display: block;
+					font-size: 80%;
+					margin-left: 1em;
+					padding-left: 1em;
+					border-left: 1px solid gray;
+					margin-top: .75em;
+					margin-bottom: .75em;
+					padding-top: .75em;
+					padding-bottom: .75em;
+					font-family:Monaco,Courier,monospace;
+					white-space:pre;
+				</rendition>
+				
+				<!-- Inline -->
+				
+				<rendition xml:id="inline" n="teibp:inline" scheme="css">
+					display:inline;
+				</rendition>
+				
+				<!-- Alignment. -->
+				<rendition xml:id="center" n="teibp:center" scheme="css">
+					display:block;
+					text-align:center;
+					margin-left:auto;
+					margin-right:auto;
+				</rendition>
+				
+				<rendition xml:id="left" n="teibp:left" scheme="css">
+					text-align:left;
+				</rendition>
+				
+				<rendition xml:id="right" n="teibp:right" scheme="css">
+					text-align:right;
+				</rendition>
+				
+				<rendition xml:id="justify" n="teibp:justify" scheme="css">
+					text-align:justify;
+				</rendition>
+				
+				<rendition xml:id="center-block" n="teibp:center-block" scheme="css">
+					display:block;
+					margin-left:auto;
+					margin-right:auto;
+				</rendition>
+				
+				<!-- Indentation -->
+				<rendition xml:id="hang" n="teibp:hang" scheme="css">
+					display:block;
+					padding-left:2.5em;
+					text-indent:-2.5em;
+				</rendition>
+				
+				<!-- Indentation for verse lines. Results in a “hanging” indent if
+					the line wraps. -->
+				<rendition xml:id="l-indent-01" n="teibp:l-indent-01" scheme="css">
+					display:block;
+					padding-left:4em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-02" n="teibp:l-indent-02" scheme="css">
+					display:block;
+					padding-left:6em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-03" n="teibp:l-indent-03" scheme="css">
+					display:block;
+					padding-left:8em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-04" n="teibp:l-indent-04" scheme="css">
+					display:block;
+					padding-left:10em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-05" n="teibp:l-indent-05" scheme="css">
+					display:block;
+					padding-left:12em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-06" n="teibp:l-indent-06" scheme="css">
+					display:block;
+					padding-left:14em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-07" n="teibp:l-indent-07" scheme="css">
+					display:block;
+					padding-left:16em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="l-indent-08" n="teibp:l-indent-08" scheme="css">
+					display:block;
+					padding-left:18em;
+					text-indent:-2em;
+				</rendition>
+				
+				<rendition xml:id="indent" n="teibp:indent" scheme="css" scope="before">
+					/* text-indent:4em; */
+					/* The above method of describing an indentation for, say, a paragraph is preferred.
+					The method being used is in response to a bug in some browsers whereby a block
+					element, like a paragraph, is erroneously re-indented after interruption by another 
+					block element (like a list, which is valid inside a paragraph). */
+					content:"\A0\A0\A0\A0\A0\A0";
+				</rendition>
+				
+				<!-- font sizes -->
+				
+				<rendition xml:id="small" n="teibp:small" scheme="css">
+					font-size:90%;
+				</rendition>
+				
+				<rendition xml:id="x-small" n="teibp:x-small" scheme="css">
+					font-size:85%;
+				</rendition>
+				
+				<rendition xml:id="xx-small" n="teibp:xx-small" scheme="css">
+					font-size:80%;
+				</rendition>
+				
+				<rendition xml:id="large" n="teibp:large" scheme="css">
+					font-size:110%;
+				</rendition>
+				
+				<rendition xml:id="x-large" n="teibp:x-large" scheme="css">
+					font-size:115%;
+				</rendition>
+				
+				<rendition xml:id="xxx-large" n="teibp:xxx-large" scheme="css">
+					font-size:120%;
+				</rendition>
+				
+				<rendition xml:id="bracket" n="teibp:bracket" scheme="css"/>
+				
+				<rendition corresp="#bracket" n="teibp:bracket" scheme="css" scope="before">
+					content:"&lt;";
+				</rendition>
+				
+				<rendition corresp="#bracket" n="teibp:bracket" scheme="css" scope="after">
+					content:">";
+				</rendition>
+		    
+		    
+			</tagsDecl>
+     </encodingDesc>
+  </teiHeader>
+   <text>
+      <body>
+         
+          <div type="section">
+             <head>Baudouin de Condé, <title>Dit du wardecors</title>/<title>Dit du Garde-Corps</title></head>
+  
+<list>  
+    <item>  
+    <msDesc>
+        <msIdentifier>
+    <settlement>Bruxelles,</settlement>
+    <repository>KBR,</repository>
+    <idno>9411-9426</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b55003999w/f1.image">
+       
+        <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Arsenal,</repository>
+    <idno>3142</idno>
+        </msIdentifier>
+        </msDesc>
+    
+            </a>   
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Arsenal,</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b10023851v/f1.image">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+            <idno>1446</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b8449695h">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+            <idno>1634</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b9006877g">    
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+            <idno>12467</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+ <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Turin,</settlement>
+    <repository>Biblioteca nazionale universitaria,</repository>
+            <idno> L. V. 32</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+</list>   
+    
+          </div>
+          
+          <div type="section">  
+    <head>Baudouin de Condé, <title>Dit du dragon</title></head>
+ 
+    <list>
+ <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Bruxelles,</settlement>
+    <repository>KBR,</repository>
+    <idno>9411-9426</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b55003999w/f1.image">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Arsenal,</repository>
+    <idno>3142</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Arsenal,</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b10023851v/f1.image">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+            <idno>1446</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b8449695h">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+            <idno>1634</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b9006877g">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+            <idno>12467</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+        
+        <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Turin,</settlement>
+    <repository>Biblioteca nazionale universitaria,</repository>
+            <idno> L. V. 32</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+        </list>   
+ 
+ 
+    <head>Baudouin de Condé, <title>Conte de gentilleche</title>  </head>  
+
+<list>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Bruxelles,</settlement>
+    <repository>KBR,</repository>
+    <idno>9411-9426</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b55003999w/f1.image">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Arsenal,</repository>
+    <idno>3142</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Arsenal,</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b9009629n">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+            <idno>837</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b10023851v/f1.image">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+            <idno>1446</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b8449695h">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+            <idno>1634</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b9006877g">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+            <idno>12467</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Turin,</settlement>
+    <repository>Biblioteca nazionale universitaria,</repository>
+            <idno> L. V. 32</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    </list>   
+    
+    <head>Baudouin de Condé, <title>Conte de l'olifant</title></head>
+    
+        <list>
+    
+       <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b8449695h">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français,</collection>
+            <idno>1634</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+            </list>
+    
+    <head>Baudouin de Condé, <title>Dit de la Rose</title></head>
+    
+<list>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Bruxelles,</settlement>
+    <repository>KBR,</repository>
+    <idno>9411-9426</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <a href="https://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=7589">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Dijon,</settlement>
+    <repository>Bibliothèque municipale,</repository>
+    <idno>526 (299)</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+    <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b55003999w/f1.image">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Arsenal,</repository>
+    <idno>3142</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b10023851v/f1.image">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+            <idno>1446</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+
+       <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Turin,</settlement>
+    <repository>Biblioteca nazionale universitaria,</repository>
+            <idno> L. V. 32</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    </list>
+
+    <head>Christine de Pizan, <title>Dit de la Rose</title></head> 
+
+<list>
+    <item>
+    <a href="https://bvmm.irht.cnrs.fr/iiif/352/canvas/canvas-190970/view">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Chantilly,</settlement>
+    <repository>Bibliothèque du Château (Musée Condé),</repository>
+    <idno>492-493(1667-1668)</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+ 
+    <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b60001038/f1.image">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement>   
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français,</collection> 
+    <idno>12779</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b8448964p">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français,</collection> 
+    <idno>604</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Baltimore,</settlement>
+    <repository>Walters Art Gallery,</repository>
+    <idno>W 316 (De Ricci 510)</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+</list>   
+</div>
+          
+          <div type="section">   
+<head>Guillaume de Machaut, <title>Le Remede de Fortune</title></head>
+    
+<list>
+    
+    <item>
+    <a href="http://guillaumedemachaut.com/mirador/index_nlw5010c.html">
+        <msDesc>
+            <msIdentifier>
+    <settlement>Aberystwyth,</settlement> 
+    <repository>National Library of Wales,</repository>
+    <idno>5010C</idno>
+            </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+    <item>
+    <a href="https://www.e-codices.unifr.ch/de/bbb/0218/bindingA/0/Sequence-30">
+    <msDesc>
+            <msIdentifier>
+<settlement>Bern,</settlement>
+    <repository>Burgerbibliothek,</repository>
+    <idno>Cod. 218</idno>
+            </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+    <item>
+    <msDesc>
+            <msIdentifier>
+<settlement>Cambridge,</settlement> 
+    <institution>Corpus Christi College,</institution>
+    <repository>Parker Library</repository>            
+    <collection>Ferrel</collection> 
+    <idno>1</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+            <msIdentifier>
+<settlement>Cambridge,</settlement> 
+    <repository>Magdalene College,</repository>
+    <collection>Pepys</collection> 
+    <idno>1594</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+            <msIdentifier>
+<settlement>New York,</settlement>
+    <repository>Morgan Library and Museum,</repository>
+    <idno>396</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b550058905">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque de l'Arsenal,</repository>
+    <idno>5203</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+    
+       <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b90591729">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français,</collection> 
+    <idno>843</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+    
+       <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b84490444">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>1584</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+    
+       <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b8449032x">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>1585</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+    
+       <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b8449043q">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>1586</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+    
+       <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b6000795k">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>9221</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+    
+       <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b60007997">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français,</collection> 
+    <idno>22545</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+    
+</list>
+          
+       
+              <head>Hélinand de Froidmont, <title>Vers de la mort</title></head>
+         
+          <list>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Albi,</settlement>
+    <repository>Bibliothèque municipale,</repository>
+    <idno>Rochegude 009</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <a href="https://www.e-codices.unifr.ch/fr/list/one/bbb/0113">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Bern,</settlement>
+    <repository>Burgerbibliothek,</repository>
+    <idno>Cod. 113</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Bruxelles,</settlement>
+    <repository>KBR,</repository>
+    <idno>9411-9426</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Chantilly,</settlement>
+    <repository>Bibliothèque du Château (Musée Condé),</repository>
+    <idno>0474 (1330)</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Den Haag,</settlement>
+    <repository>Koninklijke Bibliotheek,</repository>
+    <idno>131 D 01 (3)</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+       <item>
+    <a href=" https://iiif.biblissima.fr/collections/manifest/a9e3726c43348c7eba99dcdf205fca1136746b4d?tify={%22panX%22:0.763,%22panY%22:0.467,%22view%22:%22info%22,%22zoom%22:0.718}">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Lyon,</settlement>
+    <repository>Bibliothèque municipale,</repository>
+    <idno>1234 (1106)</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+       <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Madrid,</settlement>
+    <repository>Biblioteca nacional,</repository>
+    <idno>9446</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+       <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Maidstone,</settlement>
+    <repository>All Saints Church,</repository>
+    <idno>A.13</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Montecassino,</settlement>
+    <repository>Biblioteca della Badia,</repository>
+    <idno>209</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Montecassino,</settlement>
+    <repository>Biblioteca della Badia,</repository>
+    <idno>329</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Nantes,</settlement>
+    <repository>Bibliothèque municipale,</repository>
+    <idno>212 (fr. 0043)</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Oxford,</settlement>
+    <repository>Bodleian Library,</repository>
+    <idno>Digby 086</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+    <a href="http://gallica.bnf.fr/ark:/12148/btv1b550101223">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Arsenal,</repository>
+    <idno>5201</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+    <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b9059127g">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>fr. 423</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b90588050">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>fr. 837</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b90590400">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>fr. 1444</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b6000803p">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>fr. 1593</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b9059028j">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>fr. 1807</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b52506266b">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>fr. 2199</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b8454680s"> 
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>fr. 12483</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b52501622p"> 
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>fr. 19530</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b90075251"> 
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>fr. 19531</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b9063235s"> 
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>fr. 23111</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b9063234c"> 
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>fr. 23112</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b9063366p"> 
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>fr. 25408</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b90666494"> 
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>lat. 14958</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b6000370c"> 
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>nouv. acq. fr. 934</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+      <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>nouv. acq. fr. 5232</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+     <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <idno>nouv. acq. fr. 6881-6882</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+      <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b90632596"> 
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France et Bibliothèque Sainte Geneviève,</repository>
+    <idno>fr. 24429 et 588</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+      <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Pavia,</settlement>
+    <repository>Biblioteca Universitaria,</repository>
+    <idno>Aldini 219</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+      <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Torino,</settlement>
+    <repository>Biblioteca nazionale universitaria,</repository>
+    <idno>L.V.32</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+      <item>
+    <msDesc>
+        <msIdentifier>
+    <settlement>Tours,</settlement>
+    <repository>Bibliothèque municipale,</repository>
+    <idno>136</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+    
+      <item>
+    <a href="https://digi.vatlib.it/view/MSS_Reg.lat.1682"> 
+    <msDesc>
+        <msIdentifier>
+    <settlement>Vaticano,</settlement>
+    <repository>Biblioteca apostolica Vaticana,</repository>
+    <idno>Reg. lat. 1682</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+    <item>
+    <a href="https://digi.vatlib.it/view/MSS_Reg.lat.1616"> 
+    <msDesc>
+        <msIdentifier>
+    <settlement>Vaticano,</settlement>
+    <repository>Biblioteca apostolica Vaticana,</repository>
+    <idno>Reg. lat. 1616</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+              
+          </list>             
+              
+          <head>Jean Renart, <hi>L'Escoufle</hi></head>
+          
+       <list>   
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>Bruxelles,</settlement>
+                      <repository>KBR,</repository>
+                      <idno>B 139</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+          
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>Paris,</settlement>
+                      <repository>Arsenal,</repository>
+                      <idno>6565</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+          
+          <head>Jean Bodel, <hi>Congés</hi></head>
+          
+          
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>Albi,</settlement>
+                      <repository>Bibliothèque municipale,</repository>
+                      <idno>Rochegude 003</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+          
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>Bruxelles,</settlement>
+                      <repository>KBR,</repository>
+                      <idno>6411-6426</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b520004728"> 
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Arsenal,</repository>
+                          <idno>3411</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b55003999w">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Arsenal,</repository>
+                          <idno>3142</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b10035965f">    
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Bibliothèque nationale de France,</repository>
+                          <idno>Coll. Moreau, 1727</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b10510319x">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Bibliothèque nationale de France,</repository>
+                          <idno>fr. 375</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b9009629n">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Bibliothèque nationale de France,</repository>
+                          <idno>fr. 837</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b54002413d">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Bibliothèque nationale de France,</repository>
+                          <idno>fr. 25566</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>Torino,</settlement>
+                      <repository>Biblioteca nazionale universitaria,</repository>
+                      <idno>L.V.32</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+          
+      </list>
+          
+ 
+<head>Jean de Condé, <title>Dit d'entendement</title></head>    
+  
+<list>
+  
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque de l'Arsenal,</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+        <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b10023851v/f1.image">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>1446</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+    
+</list>   
+</div>
+          
+          <div type="section">   
+<head>Jean de Condé, <title>Dit de deus loiaus compaignons</title></head>
+   
+<list>
+   
+   <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque de l'Arsenal,</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b10023851v/f1.image">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>1446</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+    
+        
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b90075147">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>24432</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+
+    </list>   
+</div>
+          
+          <div type="section">
+
+
+<head>Jean de Condé, <title>Dit de Franchise</title></head>    
+
+<list>
+
+     <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque de l'Arsenal,</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+        
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b10023851v/f1.image">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>1446</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+  
+</list>   
+</div>
+          
+          <div type="section">  
+    
+<head>Jean de Condé, <title>Dit du roi et des ermites</title></head>    
+
+<list>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+    <settlement>Roma,</settlement> 
+    <repository>Biblioteca Casanatense,</repository>
+    <idno>1598 (B.III.18)</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+</list>   
+</div>
+          
+          <div type="section">
+    
+<head>Jean de Condé, <title>La messe des oiseaux</title></head>
+  
+<list>
+    
+  <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque de l'Arsenal,</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+        
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b10023851v/f1.image">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>1446</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+    
+</list>   
+</div>
+          
+          <div type="section">
+    
+<head>Jean de Condé, <title>Dit des Jacobins et des Fremeneurs</title></head>
+    
+<list>
+    
+      <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque de l'Arsenal,</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+        
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b10023851v/f1.image">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>1446</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+    
+</list>   
+</div>
+          
+          <div type="section">
+    
+<head>Jean de Condé, <title>Du clerc qui fut repus deriere l'escring</title></head>
+    
+<list>
+    
+      <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque de l'Arsenal,</repository>
+    <idno>3524</idno>
+        </msIdentifier>
+         </msDesc>
+    </item>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b10023851v/f1.image">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>1446</idno>
+        </msIdentifier>
+         </msDesc>
+    </a>
+    </item>
+   
+</list>   
+</div>
+          
+          <div type="section">
+    
+<head>Jean de Saint-Quentin, <title>Dit du buef</title></head>    
+    
+<list>
+    
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b90075147">
+    <msDesc>
+        <msIdentifier>
+    <settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>24432</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+
+</list>   
+</div>
+          
+          <div type="section">
+    
+<head>Jean de Saint-Quentin, <title>Dit des trois chanoinnes</title></head>    
+
+<list>
+
+     <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b90075147">
+    <msDesc>
+        <msIdentifier>
+     <settlement>Paris,</settlement> 
+     <repository>Bibliothèque nationale de France,</repository>
+     <collection>français</collection> 
+     <idno>24432</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+   
+</list>   
+</div>
+          
+          <div type="section">
+   
+<head>Nicole de Margival, <title>Dit de la panthère d'amour</title></head>
+  
+<list>
+
+    <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b90075147">
+        <msDesc>
+            <msIdentifier> 
+    <settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+     <collection>français</collection> 
+     <idno>24432</idno>
+            </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+      <item>
+          <msDesc>
+            <msIdentifier> 
+<settlement>Sankt-Peterburg,</settlement> 
+    <repository>National Library of Russia,</repository>
+    <idno>0003</idno>
+              </msIdentifier>
+          </msDesc>
+    </item>
+
+</list>   
+</div>
+          
+          <div type="section">
+
+
+          <head>Raoul de Houdenc, <hi>Roman des eles</hi></head>
+          
+          <list>    
+              <item>
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Berlin,</settlement>
+                          <repository>Staatsbibliothek zu Berlin – Preussischer Kulturbesitz,</repository>
+                          <idno>gall. 4<sup>o</sup> 48</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </item>
+              
+              <item>
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Cambridge (Mass),</settlement>
+                          <repository>Harvard University Library,</repository>
+                          <idno>fr. 395</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </item>
+              
+              <item>
+                  <a href="https://www.e-codices.ch/en/list/one/fmb/cb-0082">
+                      <msDesc>
+                          <msIdentifier>
+                              <settlement>Cologny (Genève),</settlement>
+                              <repository>Biblioteca Bodemeriana,</repository>
+                              <idno>082</idno>
+                          </msIdentifier>
+                      </msDesc>
+                  </a>
+              </item>
+              
+              <item>
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Arsenal,</repository>
+                          <idno>2772</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </item>
+              
+              <item>
+                  <a href="https://gallica.bnf.fr/ark:/12148/btv1b10035965f">
+                      <msDesc>
+                          <msIdentifier>
+                              <settlement>Paris,</settlement>
+                              <repository>Bibliothèque nationale de France,</repository>
+                              <idno>Coll. Moreau, 1727</idno>
+                          </msIdentifier>
+                      </msDesc>
+                  </a>
+              </item>
+              
+              <item>
+                  <a href="https://gallica.bnf.fr/ark:/12148/btv1b9009629n">
+                      <msDesc>
+                          <msIdentifier>
+                              <settlement>Paris,</settlement>
+                              <repository>Bibliothèque nationale de France,</repository>
+                              <idno>fr. 837</idno>
+                          </msIdentifier>
+                      </msDesc>
+                  </a>
+              </item>
+              
+              <item>
+                  <a href="https://gallica.bnf.fr/ark:/12148/btv1b9062193k">
+                      <msDesc>
+                          <msIdentifier>
+                              <settlement>Paris,</settlement>
+                              <repository>Bibliothèque nationale de France,</repository>
+                              <idno>fr. 19152</idno>
+                          </msIdentifier>
+                      </msDesc>
+                  </a>
+              </item>
+              
+              <item>
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Torino,</settlement>
+                          <repository>Biblioteca nazionale universitaria,</repository>
+                          <idno>L.V.32</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </item>
+              
+          </list>   
+</div>
+          
+          <div type="section">
+
+          <head>Raoul de Houdenc, <hi>Songe d'Enfer</hi></head>
+          
+        <list>  
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>Bern,</settlement>
+                      <repository>Burgerbibliothek,</repository>
+                      <idno>Cod. 354</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+          
+          <item>
+              <a href="https://brbl-dl.library.yale.edu/vufind/Record/3446537">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>New Haven,</settlement>
+                          <repository>Yale University Library,</repository>
+                          <idno>Beinecke 703</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://digital.bodleian.ox.ac.uk/inquire/Discover/Search/#/?p=c+0,t+,rsrs+0,rsps+10,fa+,so+ox%3Asort%5Easc,scids+,pid+10ff1c2f-acd3-4370-b276-a7ad739d2dae,vi+88128e7c-4a1c-42d9-84cc-ce4db331806b">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Oxford,</settlement>
+                          <repository>Bodleian Library,</repository>
+                          <idno>Digby 086</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b9009629n">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Bibliothèque nationale de France,</repository>
+                          <idno>fr. 837</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b9058947p">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Bibliothèque nationale de France,</repository>
+                          <idno>fr. 2168</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b9060922n">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Bibliothèque nationale de France,</repository>
+                          <idno>fr. 12603</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b9063361m">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Bibliothèque nationale de France,</repository>
+                          <idno>fr. 25433</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>Paris,</settlement>
+                      <repository>Drouot, Vente du 21 juin 1985,</repository>
+                      <idno>Ancien Ashburnham-Barrois 501</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+          
+          <item>
+              <a href="https://bvmm.irht.cnrs.fr/consult/consult.php?mode=ecran&reproductionId=4887&VUE_ID=1060392&panier=false&carouselThere=false&nbVignettes=4x3&page=1&angle=0&zoom=&tailleReelle=">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Reims,</settlement>
+                          <repository>Bibliothèque municipale,</repository>
+                          <idno>1275 (J. 743)</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>Torino,</settlement>
+                      <repository>Biblioteca nazionale universitaria,</repository>
+                      <idno>L.V.32</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+      </list>   
+</div>
+          
+          <div type="section">
+
+          <head>Raoul de Houdenc, <title>Dit</title></head>
+          
+          <list>
+              <item>
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Bern,</settlement>
+                          <repository>Burgerbibliothek,</repository>
+                          <idno>Cod. 354</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </item>
+              
+              <item>
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Nottingham,</settlement>
+                          <repository>University Library, Department of Manuscripts,</repository>
+                          <idno>WLC Lm 6</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </item>
+              
+          </list>   
+</div>
+          
+          <div type="section">
+          
+          <head>Raoul de Houdenc, <title>Voie du Paradis</title></head>
+          
+          <list>
+              <item>
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Bruxelles,</settlement>
+                          <repository>KBR,</repository>
+                          <idno>9411-9426</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </item>
+              
+              <item>
+                  <a href="https://gallica.bnf.fr/ark:/12148/btv1b9009629n">
+                      <msDesc>
+                          <msIdentifier>
+                              <settlement>Paris</settlement>
+                              <repository>Bibliothèque nationale de France</repository>
+                              <idno>fr. 837</idno>
+                          </msIdentifier>
+                      </msDesc>
+                  </a>
+              </item>
+              
+              <item>
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Torino,</settlement>
+                          <repository>Biblioteca nazionale universitaria,</repository>
+                          <idno>L.V.32</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </item>
+              
+          </list>   
+</div>
+          
+          <div type="section">
+
+          <head>Thibaut de Marly, <title>Vers</title></head>
+          
+     <list>     
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>London,</settlement>
+                      <repository>Lambeth Palace Library,</repository>
+                      <idno>0522</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+          
+          <item>
+              <a href="http://gallica.bnf.fr/ark:/12148/btv1b525073645">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Arsenal,</repository>
+                          <idno>3123</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b90596402">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Bibliothèque nationale de France,</repository>
+                          <idno>fr. 1850</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b9063334q">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Bibliothèque nationale de France,</repository>
+                          <idno>fr. 25405</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+      </list>   
+</div>
+          
+          <div type="section">
+
+
+<head>Ci nous dit </head>
+    
+<list>
+    
+    <item>
+        <msDesc>
+            <msIdentifier>
+    <settlement>Besançon, </settlement>
+    <repository>Bibliothèque municipale,</repository>        
+    <collection>français</collection>
+    <idno>0257</idno>
+            </msIdentifier>
+        </msDesc>
+     </item>
+         
+     <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Bruxelles, </settlement>
+    <repository>KBR,</repository>
+    <idno>9017 </idno>
+            </msIdentifier>
+         </msDesc>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Bruxelles, </settlement> 
+    <repository>KBR,</repository>
+    <idno>10388 </idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Bruxelles, </settlement>
+    <repository>KBR,</repository>
+    <idno>7831 </idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <a href="https://bvmm.irht.cnrs.fr/consult/consult.php?VUE_ID=907093">
+        <msDesc>
+            <msIdentifier>
+<settlement>Caen, </settlement> 
+    <repository>Bibliothèque municipale,</repository>
+    <collection>français</collection> 
+    <idno>262 </idno>
+            </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Paris, </settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>10038</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+    
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>11201 </idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <a href="https://bvmm.irht.cnrs.fr/mirador/index.php?manifest=https://bvmm.irht.cnrs.fr/iiif/213/manifest">
+        <msDesc>
+            <msIdentifier>
+<settlement>Chantilly,</settlement>
+    <repository>Bibliothèque du Château (Musée Condé),</repository>
+    <idno>0026 </idno>
+            </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+
+    <item>
+    <a href="https://bvmm.irht.cnrs.fr/mirador/index.php?manifest=https://bvmm.irht.cnrs.fr/iiif/214/manifest">
+        <msDesc>
+            <msIdentifier>
+<settlement>Chantilly,</settlement> 
+    <repository>Bibliothèque du Château (Musée Condé),</repository>
+    <idno>0027 </idno>
+            </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Hamburg,</settlement> 
+    <repository>Staats-und Universitätsbibliothek,</repository>
+    <idno>001 </idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>London,</settlement> 
+    <repository>Bristish Library,</repository>
+    <collection>Harley</collection>
+    <idno>4403 </idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Oxford,</settlement> 
+    <repository>Bodleian Library,</repository>
+    <collection>Rawlison</collection> 
+    <idno>D.659 </idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement>
+    <repository>Bibliothèque de l'Arsenal,</repository>
+    <idno>2059</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b84511003">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>425</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+
+    <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b105372417">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+    <idno>436</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+    <idno>9576 </idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b90613180">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+    <idno>17059 </idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection> 
+    <idno>17060</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français,</collection> 
+    <idno>20110</idno>
+        </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <a href="https://gallica.bnf.fr/ark:/12148/btv1b9063922k">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris</settlement> 
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français,</collection>
+    <idno>24285</idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+
+    <item>
+        <msDesc>
+            <msIdentifier>
+<settlement>Paris,</settlement>
+    <repository>Bibliothèque nationale de France,</repository>
+    <collection>français</collection>
+    <idno>11273</idno>
+            </msIdentifier>
+        </msDesc>
+    </item>
+
+    <item>
+    <a href="https://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=13403">
+    <msDesc>
+        <msIdentifier>
+<settlement>Paris,</settlement>
+    <repository>Bibliothèque Sainte-Geneviève,</repository>
+    <idno>1465 </idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+
+    <item>
+    <a href="https://bvmm.irht.cnrs.fr/consult/consult.php?mode=ecran&panier=false&reproductionId=2328&VUE_ID=610974&carouselThere=false&nbVignettes=4x3&page=1&angle=0&zoom=petit&tailleReelle=">
+    <msDesc>
+        <msIdentifier>
+<settlement>Reims,</settlement> 
+    <repository>Bibliothèque municipale,</repository>
+    <idno>614 (F.435) </idno>
+        </msIdentifier>
+        </msDesc>
+    </a>
+    </item>
+    
+    </list>    
+
+          </div>
+          
+          <div type="section">
+              
+          <head><hi>Débat de l'hiver et de l'été</hi></head>
+          
+      <list>  
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>London,</settlement>
+                      <repository>British Library,</repository>
+                      <idno>Harley 2253</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+      </list>  
+
+</div>
+
+ <div type="section">
+     
+          <head><title>Roman des romans</title>/</head>
+      
+                 <list>    
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>Cambridge,</settlement>
+                      <repository>Clare College Library,</repository>
+                      <idno>10</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+          
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>Cambridge,</settlement>
+                      <repository>Trinity College Library,</repository>
+                      <idno>1118 (O.02.14)</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+          
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>London,</settlement>
+                      <repository>British Library,</repository>
+                      <idno>Royal 20.B.XIV</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+          
+          <item>
+              <a href="https://brbl-dl.library.yale.edu/vufind/Record/3446538">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>New Haven,</settlement>
+                          <repository>Yale University Library,</repository>
+                          <idno>Beinecke 590</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>Oxford,</settlement>
+                      <repository>Bodleian Library,</repository>
+                      <idno>Douce 210</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b9062154g">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Bibliothèque nationale de France,</repository>
+                          <idno>fr. 19525</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b9063681d">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Bibliothèque nationale de France,</repository>
+                          <idno>fr. 25407</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <a href="https://gallica.bnf.fr/ark:/12148/btv1b90632596">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Paris,</settlement>
+                          <repository>Bibliothèque nationale de France et Bibliothèque Sainte-Geneviève,</repository>
+                          <idno>fr. 24429 et 0588</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+          <item>
+              <msDesc>
+                  <msIdentifier>
+                      <settlement>Princeton,</settlement>
+                      <repository>University Library,</repository>
+                      <idno>Coll. Phillipps 2223 (Taylor Medieval Ms 1)</idno>
+                  </msIdentifier>
+              </msDesc>
+          </item>
+          
+          <item>
+              <a href="https://digi.vatlib.it/view/MSS_Reg.lat.1682">
+                  <msDesc>
+                      <msIdentifier>
+                          <settlement>Vaticano,</settlement>
+                          <repository>Biblioteca apostolica Vaticana,</repository>
+                          <idno>reg. lat. 1682</idno>
+                      </msIdentifier>
+                  </msDesc>
+              </a>
+          </item>
+          
+      </list>
+ </div>         
+          
+      </body>
+  </text>
+</TEI>
