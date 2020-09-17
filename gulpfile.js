@@ -12,12 +12,13 @@ function cleandocs() {
 }
 
 function copyresources() {
-    return gulp.src(['./assets/**' ])
+    return gulp.src(['./assets/**'])
       .pipe(gulp.dest(targetStyle));
 }
-
+    
+    
 function copy() {
-   return gulp.src(['./images/**','./**/*.html', './**/*.xsl', './**/*.xml', '!./fragments/**', '!./node_modules/**', '!templet-contenu.html' ])
+   return gulp.src(['./images/**', './**/*.html', './**/*.xsl', './**/*.xml', '!./fragments/**', '!./node_modules/**', '!templet-contenu.html' ])
       .pipe(fileinclude({
         prefix: '@@',
         basepath: '@file'
