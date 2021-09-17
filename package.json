@@ -5,11 +5,14 @@
   "licence": "Creative Commons",
   "devDependencies": {
     "del": "^5.1.0",
-    "gulp": "^4.0.2",
+    "gulp": "^3.9.1",
     "gulp-file-include": "^2.1.1",
     "kind-of": "^6.0.3"
   },
   "scripts": {
     "build": "gulp default"
+  },
+  "dependencies": {
+    "gulp-update": "^0.0.2"
   }
 }
